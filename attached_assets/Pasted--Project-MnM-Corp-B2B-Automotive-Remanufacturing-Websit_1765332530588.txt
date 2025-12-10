@@ -1,0 +1,76 @@
+# Project: MnM Corp (B2B Automotive Remanufacturing Website)
+
+## 1. Project Context & Role
+* **Role:** Senior Full-Stack Web Architect.
+* **Goal:** Build a high-performance, corporate website for **MnM Co., Ltd.**, a specialist in remanufacturing automotive transmissions (DCT, A/T) and EV reduction gears.
+* **Brand Identity:** Professional, High-Tech, Eco-friendly (Green & Blue), Trustworthy.
+* **Target Audience:** B2B Automotive clients (e.g., Hyundai Transys), Investors, Partners.
+
+## 2. Tech Stack & Architecture
+* **Framework:** React (Vite) + TypeScript.
+* **Styling:** Tailwind CSS (for modern, responsive industrial design).
+* **Animation:** Framer Motion (for smooth section transitions).
+* **Icons:** Lucide React.
+* **Routing:** React Router DOM.
+* **Architecture (SOLID Principles):**
+    * `/src/components/layout`: Header, Footer, Layout container.
+    * `/src/components/ui`: Reusable buttons, cards, section wrappers.
+    * `/src/pages`: Home, Company, Business, Technology, Quality, Contact.
+    * `/src/data`: Store static data (history, product list) separately for maintainability.
+
+## 3. Detailed Requirements
+
+### A. Design System
+* **Color Palette:**
+    * Primary: Deep Blue (Professionalism, Trust) - represents Engineering.
+    * Secondary: Eco Green (Remanufacturing, Sustainability).
+    * Background: Clean White/Light Gray for readability.
+* **Typography:** 'Noto Sans KR' or 'Inter' (Clean sans-serif).
+
+### B. Mandatory Content (STRICT)
+* **Footer Information:** You MUST include the following specific contact details in the Footer component, overriding any other data:
+    * **Company Name:** 한국인프라연구원(주)
+    * **Email:** infrastructure@kakao.com
+    * **Phone:** 010-9143-0800
+
+### C. Page Specifications (Based on Source Material)
+
+**1. Home Page**
+* **Hero Section:** High-quality industrial background. Headline: "Global Leader in Transmission Remanufacturing."
+* [cite_start]**Key Metrics:** Display counts: "Production Capacity: 15,100 units/year", "Defect Rate: < 1600ppm"[cite: 39, 54].
+* [cite_start]**Certifications:** Badge display for **IATF 16949** and **ISO 45001**.
+
+**2. Company (About Us)**
+* [cite_start]**Overview:** CEO Message, Location (Seosan-si, Chungnam)[cite: 48].
+* [cite_start]**History:** Timeline component (2018 Founding -> 2022 EV Gear Mass Production -> 2025 Gen2 DCT) [cite: 71-100].
+
+**3. Business (Products)**
+* **Product Cards:**
+    * **DCT (Double Clutch Transmission):** Dry & Wet types.
+    * **EV Reduction Gears:** Integrated & Separated types (Key growth area).
+    * **A/T (Automatic Transmission):** Front-wheel 8-speed.
+    * **Heavy Machinery:** Transmission disassembly/assembly.
+* Include images placeholders relevant to car parts/gears.
+
+**4. Technology & Infrastructure**
+* [cite_start]**Facilities:** Highlight "Clean Room (Class 20k/3k)" for V/Body assembly.
+* [cite_start]**Process Flow:** Visual diagram of the 10-step EV Gear manufacturing process (RO Check -> Motor Test -> Disassembly -> Cleaning -> Assembly -> EOL)[cite: 412].
+
+**5. Quality Control**
+* [cite_start]**Systems:** Emphasize **MES** (Manufacturing Execution System) and **Interlocking System** (preventing errors).
+* **Equipment:** List Air Leak Testers, EOL Testers, and Fool-proof systems.
+
+**6. Contact Us**
+* [cite_start]**Office Info:** Display MnM's actual address: "198, Seongyeon 4-ro, Seongyeon-myeon, Seosan-si, Chungnam, Korea"[cite: 48].
+* **Inquiry Form:** Name, Company, Email, Message.
+
+## 4. Implementation Steps
+1.  **Setup:** Initialize Vite project, install Tailwind, Framer Motion, Lucide, React Router.
+2.  **Data Structure:** Create `constants.ts` to store company history, product lists, and equipment details extracted from the PPT.
+3.  **Components:** Build responsive Header (Navbar) and the **Mandatory Footer**.
+4.  **Pages Development:**
+    * Build Home with Hero and Stats.
+    * Build Business page with Grid layout for products.
+    * Build Technology page with a Step-by-Step process visualization.
+5.  **Integration:** Assemble pages into `App.tsx` with routing.
+6.  **Refinement:** Apply hover effects, ensure mobile responsiveness, and verify the specific Footer info.
